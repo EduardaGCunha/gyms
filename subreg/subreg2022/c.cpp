@@ -12,14 +12,20 @@ int ans[MAXN];
 int d1[] = {2, 0, -2, 0};
 int d2[] = {0, 2, 0, -2};
 
+//(1, 0), (0, 1), (-1, 0), (0, -1)
+// 1  2  3 4 5
+// 10 14 3
+
 void bfs(int x, int y, int c){
     queue<pair<int, int>> q;
     visited[x][y] = 1;
     int cnt = 0;
     q.push({x, y});
+
     while(!q.empty()){
         auto [cx, cy] = q.front(); q.pop();
         cnt++;
+        //checar as direcoes 
         for(int i = 0; i < 4; i++){
             int nx = cx + d1[i];
             int ny = cy + d2[i];
