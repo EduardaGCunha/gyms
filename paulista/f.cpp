@@ -29,7 +29,7 @@ bool dfs(int v, int p, int depth){
     return ans;
 }
 
-signed main(){
+ main(){
     fastio;
     int n, m; 
     cin >> n >> m;
