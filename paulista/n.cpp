@@ -14,6 +14,7 @@ we find the smallest prime factor for each guy
 
 //menor fator primo
 void mfp(){
+    //preenche spf[i] com i
     iota(spf, spf+MAXN, 0);
     for(int i = 2; i*i < MAXN; i++){
         if(spf[i] == i){
