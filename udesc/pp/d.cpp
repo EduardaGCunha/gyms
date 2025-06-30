@@ -59,5 +59,4 @@ signed main(){
     x--, y--;
     solve(x, y);
     cout << endl;
-
 }
