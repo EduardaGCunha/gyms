@@ -10,7 +10,7 @@ signed main() {
     int prosa, pazul, n; cin >> prosa >> pazul >> n;
     int ans = 0;
     for(int i = 0; i <= n; i++){
-        ans = max(ans, prosa*i + pazul*(n-i));
+        ans = max(ans, prosa*i+pazul*n-i);
     }
     cout << ans << endl;
 }
