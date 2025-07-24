@@ -87,13 +87,13 @@ signed main() {
         }
     }
 
-    // for(int i = 1; i <= n; i++){
-    //     cout << "conexoes do " << i << ": ";
-    //     for(auto u : graph[i]){
-    //         cout << u.first << " " << u.second << endl;
-    //     }
-    //     cout << endl;
-    // }
+    for(int i = 1; i <= n; i++){
+        cout << "o filme " << i << ": " << endl;
+        for(auto u : graph[i]){
+            cout << "se conecta com o filme " << u.first << " atraves do ator " << u.second << endl;
+        }
+        cout << endl;
+    }
 
     // for(int i = 1; i <= m; i++){
     //     cout << "conexoes da pessoa " << i << ": ";
