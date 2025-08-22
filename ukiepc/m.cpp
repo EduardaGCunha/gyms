@@ -4,13 +4,6 @@ using namespace std;
 pair<string, int> arr[10];
 int n;
 
-//ADD 5
-//DIVIDE 5
-
-//VETOR[30] = 30
-//VETOR[30] = 35
-//VETOR[30] = 7
-
 int solve(int x){
     if(x == 30){
         for(int i = 0; i < n; i++){
