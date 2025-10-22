@@ -73,10 +73,15 @@ bool segments_intersect(const pt &a, const pt &b, const pt &c, const pt &d){
 pt a, b, c, d;
 
 bool quadrado(){
-    pt v0 = b - a; // AB
-    pt v1 = c - b; // BC
+    pt v0 = b - a; // BA
+    pt v1 = c - b; // CB
     pt v2 = d - c; // CD
     pt v3 = a - d; // DA
+
+    //checando o angulo entre BA e DA
+    if(v0*v3 == 0){
+        cout << "sao perpendiculares\n";
+    }
 
     ll d0 = dist2(a,b);
     ll d1 = dist2(b,c);
