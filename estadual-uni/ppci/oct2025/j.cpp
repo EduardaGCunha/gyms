@@ -13,16 +13,20 @@ ano = 360 dias
 signed main() {
     fastio;
     int n; cin >> n; 
-    vector<tuple<int, int, int>> v;
+    vector<int> val;
     for(int i = 0; i < n; i++){
         int a, b, c; cin >> a >> b >> c;
-        v.push_back({a, b, c});
+        int x = a + b*30 + c*360;
+        val.push_back(x);
     }
-    int mn = LLONG_MAX, mx = 0;
-    for(int i = 0; i < n-1; i++){
-        auto [a, b, c] = v[i];
-        auto [x, y, z] = v[i+1];
-        int tot = 0;
-        tot += abs(a-x);
+
+    sort(val.begin(), val.end());
+
+    int mn = INT_MAX, mx = 0;
+    for(int i = 1; i < n; i++){
+        mn = min(mn, val[i]-val[i-1]);
+        mx = max(mx, val[i]-val[i-1]);
     }
+    cout << mn << " " << mx << endl;
+
 }
