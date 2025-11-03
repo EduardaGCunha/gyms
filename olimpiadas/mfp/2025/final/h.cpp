@@ -7,8 +7,7 @@ using namespace std;
 
 signed main() {
     fastio;
-    int r, a, n; cin >> r >> a >> n;
-    int x = n/2;
-    int y = n-x;
-    cout << r*a*x*y << endl;
+    int tc; cin >> tc;
+    int th = tc*2 - 60;
+    cout << th << endl;
 }
