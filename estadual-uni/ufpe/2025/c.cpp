@@ -31,12 +31,14 @@ void solve() {
             }else ans = max(ans, sum);
             cnt = 0, sum = 0, f = -1, lst = -1;
         }else{
-            int k = (x == 1 || x == -1) ? 0 : (int)log2(abs(x));
+            int k = 0;
+            int temp = abs(x);
+            while(temp > 1) { temp >>= 1; k++; }
             sum += k;
             if(x < 0){
                 cnt++;
                 if(f == -1) f = sum;
-                else lst = sum - k;
+                lst = sum - k;
             }    
         }
     }
