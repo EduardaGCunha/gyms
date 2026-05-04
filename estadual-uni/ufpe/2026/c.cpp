@@ -16,7 +16,7 @@ void solve(){
     for(int i = 0; i < m; i++) cin >> brr[i];
 
     auto mult = [](vector<int> a, vector<int> b){
-        vector<int> res(a.size() + b.size(), 0);
+        vector<int> res(a.size() + b.size()-1, 0);
         for(int i = 0; i < a.size(); i++){
             for(int j = 0; j < b.size(); j++){
                 res[i+j] = (res[i+j] + a[i]*b[j])%MOD;
@@ -26,7 +26,7 @@ void solve(){
     };
 
     vector<int> mt = {1};
-    vector<int> ans(n+m, 0);
+    vector<int> ans((n-1)*(m-1)+1, 0);
     for(int i = 0; i < n; i++){
         if(i == 0) {
             ans[i] = arr[i];
@@ -39,7 +39,6 @@ void solve(){
     }
 
     for(auto u : ans){
-        if(u == 0) break;
         cout << u << " ";
     }
     cout << endl;
